@@ -22,3 +22,8 @@
 !/figures/logos/
 /figures/logos/*
 !/figures/logos/SKAO_ukSRC_logo_colour_rgb.png
+
+
+# Template and example PDFs
+!/uksrc-memo-template.pdf
+!/uksrc-memo-example.pdf

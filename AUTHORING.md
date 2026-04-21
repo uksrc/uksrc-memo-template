@@ -1,6 +1,6 @@
 # UKSRC Memo Authoring Guide
 
-This directory now has three distinct roles:
+Key files:
 
 - [uksrc-memo.cls](uksrc-memo.cls): the reusable UKSRC memo class
 - [uksrc-memo-template.tex](uksrc-memo-template.tex): the lean starter file for new memos
@@ -43,7 +43,6 @@ Most authors should leave these untouched unless they are maintaining the templa
 - For memo drafts, `\today` is usually a sensible default for `\IssueDate`.
 - If you need a fixed issued-on date, set `\IssueDate` manually and keep `\DocumentDate` linked to it.
 - `contact` is optional. If you omit it, no contact row is printed.
-- Values containing commas should be wrapped in braces inside `\SetMemoMetadata{...}`.
 
 Example:
 
