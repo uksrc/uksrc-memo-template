@@ -1,0 +1,114 @@
+%%% Local Variables:
+%%% TeX-command-extra-options: "-shell-escape"
+\documentclass{uksrc-memo}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+
+\SetMemoMetadata{
+  title={Example UKSRC Memo},
+  id={UKSRC-MEMO-0001},
+  type={MEMO},
+  revision={0.1},
+  % Allowed values: Draft | In Review | Approved | Superseded
+  status={Draft},
+  tags={validation, EoR, \JiraTag{SE-397}},
+  classification={Unrestricted},
+  authors={First Author, Second Author, Third Author},
+  footer-authors={First Author et al.},
+  contact={First Author (email@example.com)},
+  % Choose one:
+  % issue-date={07 April 2026},
+  issue-date={\today},
+  summary={This memo summarises the purpose, scope, main conclusions, and any actions requested of the reader. Replace this paragraph with a concise executive summary suitable for circulation as a stand-alone overview.}
+}
+\renewcommand{\uksrcdisclaimertext}{%
+The UKSRC memos are intended to support the rapid recording of technical work, investigations, design notes, and open questions. A memo may reflect the views of its authors at the time of writing and should not automatically be taken as formal UKSRC policy, project baseline, or final design guidance.
+}
+
+\ShowAuthorApprovals
+\ResetAuthorApprovals
+\AddAuthorApprovalSection{Authored by}
+\AddAuthorApproval{First Author}{Lead Author}{UKSRC}{[Signature] [Date]}
+\AddAuthorApproval{Second Author}{Contributor}{Organisation}{}
+\AddAuthorApprovalSection{Approved and released by}
+\AddAuthorApproval{Reviewer Name}{Reviewer}{Organisation}{[Signature] [Date]}
+
+\ResetDocumentHistory
+\AddDocumentRevision{0.1}{\IssueDate}{Initial template draft}
+
+\ResetAbbreviations
+\AddAbbreviation{Abbreviation}{Description}
+\AddAbbreviation{SKA}{Square Kilometre Array}
+\AddAbbreviation{UKSRC}{United Kingdom SKA Regional Centre}
+\AddAbbreviation{UKSRC-ST}{UKSRC Science Tooling}
+
+\newcommand{\unit}[1]{\mathrm{#1}}
+\newcommand{\unitp}[2]{\ensuremath{\mathrm{#1}^{#2}}}
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\autoref*{#1}\ \nameref*{#1}}}
+
+\begin{document}
+
+\uksrcstandardfrontmatter
+% Advanced/rare option if you specifically need a second metadata table:
+% \ResetDocumentInfoRows
+% \AddDocumentInfoItem{Document ID}{\DocumentID}
+% \AddDocumentInfoItem{Document type}{\DocumentType}
+% \AddDocumentInfoItem{Revision}{\DocumentRevision}
+% \AddDocumentInfoItem{Classification}{\DocumentClassification}
+% \AddDocumentInfoItem{Status}{\DocumentStatus}
+% \AddDocumentInfoItem{Tags}{\DocumentTags}
+% \AddDocumentInfoItem{Date}{\DocumentDate}
+% \section*{Document information}
+% \DocumentInfoTable
+%
+% Optional front matter if needed:
+\uksrclistofabbreviations
+
+\section{Introduction}
+
+State the purpose of the memo, the intended audience, and the scope. Cite literature where relevant, for example \citet{1933Natur.132...66J}. Replace or add to this reference with a paper that is relevant to the memo. This sentence includes an example footnote\footnote{Example footnote text.} to show how notes are styled in the template.
+
+\section{Context and Scope}
+
+Use this optional section only if separate background or scope definition is useful.
+
+\section{Main Discussion}
+
+Use this section for the core material of the memo. Replace the example subsections with headings that fit the actual content.
+
+\subsection{Topic 1}
+
+Add the first main topic here.
+
+\subsection{Topic 2}
+
+Add the second main topic here.
+
+\section{Conclusions and Recommendations}
+
+Summarise the key outcome of the memo and any recommendations or decisions.
+
+% Optional if there are unresolved points or follow-up actions to track.
+% \section{Open Issues and Next Steps}
+% Track unresolved points, dependencies, and next steps.
+% Authors may optionally organise the main discussion around:
+% - options considered
+% - decision or recommendation
+% - risks and limitations
+%
+% Optional back matter if needed:
+% \uksrclistoffigures
+% \uksrclistoftables
+
+\bibliographystyle{plainnat}
+\bibliography{uksrc-memo-template}
+
+% Backup option for very short memos:
+% \begin{thebibliography}{}
+% \bibitem[Example(2026)]{example-ref}
+% Example reference entry.
+% \end{thebibliography}
+
+\end{document}

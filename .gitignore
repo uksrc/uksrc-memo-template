@@ -1,0 +1,24 @@
+# Ignore everything in this template folder by default, then allowlist the
+# source files needed for GitHub and documentation builds.
+/*
+
+# Template documentation and metadata
+!/.gitignore
+!/README.md
+!/AUTHORING.md
+!/NOTICE.md
+!/LICENSE
+
+# LaTeX source files
+!/uksrc-memo.cls
+!/uksrc-memo-template.tex
+!/uksrc-memo-example.tex
+!/uksrc-memo-template.bib
+!/aas_macros.sty
+
+# Template assets
+!/figures/
+/figures/*
+!/figures/logos/
+/figures/logos/*
+!/figures/logos/SKAO_ukSRC_logo_colour_rgb.png

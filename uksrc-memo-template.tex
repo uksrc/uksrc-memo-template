@@ -1,0 +1,67 @@
+%%% Local Variables:
+%%% TeX-command-extra-options: "-shell-escape"
+\documentclass{uksrc-memo}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+
+\SetMemoMetadata{
+  title={Short Memo Title},
+  id={UKSRC-MEMO-0001},
+  type={MEMO},
+  revision={0.1},
+  status={Draft},
+  tags={validation, EoR, \JiraTag{SE-397}},
+  classification={Unrestricted},
+  authors={First Author, Second Author},
+  footer-authors={First Author, Second Author},
+  % Optional:
+  contact={First Author (email@example.com)},
+  % Choose one:
+  % issue-date={07 April 2026},
+  issue-date={\today},
+  summary={Replace this paragraph with a concise executive summary that can be read on its own. State the purpose of the memo, the main result, and any action or decision requested of the reader.}
+}
+
+% Optional approval/signature table. Uncomment this block if the memo needs formal approval tracking.
+% \ShowAuthorApprovals
+% \ResetAuthorApprovals
+% \AddAuthorApprovalSection{Authored by}
+% \AddAuthorApproval{First Author}{Lead Author}{UKSRC}{[Signature] [Date]}
+% \AddAuthorApproval{Second Author}{Contributor}{Organisation}{}
+% \AddAuthorApprovalSection{Approved and released by}
+% \AddAuthorApproval{Reviewer Name}{Reviewer}{Organisation}{[Signature] [Date]}
+
+\ResetDocumentHistory
+\AddDocumentRevision{0.1}{\IssueDate}{Initial draft}
+
+\begin{document}
+
+\uksrcstandardfrontmatter
+
+\section{Introduction}
+
+State the purpose of the memo, the intended audience, and the scope.
+
+\section{Main Discussion}
+
+Use this section for the core technical content.
+
+\subsection{Topic 1}
+
+Add the first main topic here.
+
+\subsection{Topic 2}
+
+Add the second main topic here.
+
+\section{Conclusions and Recommendations}
+
+Summarise the main outcome, recommendation, or decision.
+
+% Uncomment these lines when you add citations:
+% \bibliographystyle{plainnat}
+% \bibliography{uksrc-memo-template}
+
+\end{document}
