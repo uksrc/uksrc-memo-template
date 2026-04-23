@@ -1,19 +1,5 @@
 # UKSRC Memo Authoring Guide
 
-Key files:
-
-- [uksrc-memo.cls](uksrc-memo.cls): the reusable UKSRC memo class
-- [uksrc-memo-template.tex](uksrc-memo-template.tex): the lean starter file for new memos
-- [uksrc-memo-example.tex](uksrc-memo-example.tex): a fuller example showing optional features
-
-## Quick Start
-
-1. Copy [uksrc-memo-template.tex](uksrc-memo-template.tex) to a memo-specific filename if you want to keep the starter untouched.
-2. Update the `\SetMemoMetadata{...}` block near the top of the file.
-3. Replace the placeholder sections with your memo content.
-4. If the memo cites literature, uncomment the bibliography lines near the end of the starter file and add references to [uksrc-memo-template.bib](uksrc-memo-template.bib) or switch to a memo-specific `.bib` file.
-5. Build with `latexmk -pdf <your-file>.tex`.
-
 ## What To Edit In The Starter
 
 In [uksrc-memo-template.tex](uksrc-memo-template.tex), most authors only need to edit:
@@ -23,14 +9,20 @@ In [uksrc-memo-template.tex](uksrc-memo-template.tex), most authors only need to
 - the optional approval rows added with `\AddAuthorApproval`, if approval tracking is enabled
 - the memo body after `\begin{document}`
 
-## What Usually Stays Unchanged
 
-Most authors should leave these untouched unless they are maintaining the template itself:
+## References and BibTeX
 
-- page layout, colours, and footer logic in [uksrc-memo.cls](uksrc-memo.cls)
-- title-page layout in [uksrc-memo.cls](uksrc-memo.cls)
-- the helper macro definitions for approval/history tables in [uksrc-memo.cls](uksrc-memo.cls)
-- the underlying metadata macros in [uksrc-memo.cls](uksrc-memo.cls)
+The example file uses BibTeX by default, and the starter file includes the same lines commented out until you need citations:
+
+- bibliography database: `uksrc-memo-template.bib`
+- bibliography style: `plainnat`
+
+Common ADS/SciX journal macros such as `\nat`, `\apj`, `\mnras`, and `\aap` are provided by `aas_macros.sty`, a small AASTeX-derived macro subset loaded by the class, so exported BibTeX entries should usually work without modification.
+
+If a less common journal macro appears and the build fails with an undefined control sequence:
+
+- simplest fix: replace the macro in the `.bib` file with plain journal text, e.g. `journal = {Nature}`
+- reusable fix: add a matching macro definition to `aas_macros.sty`, e.g. `\newcommand\foojournal{\ref@jnl{Foo Journal}}`
 
 ## Metadata Conventions
 
@@ -149,17 +141,6 @@ Then insert:
 \uksrclistofabbreviations
 ```
 
-### Use BibTeX
-
-The example file uses this default setup, and you can uncomment the same lines in the starter when needed:
-
-```tex
-\bibliographystyle{plainnat}
-\bibliography{uksrc-memo-template}
-```
-
-Common ADS/SciX journal macros such as `\nat`, `\apj`, `\mnras`, and `\aap` are provided by [aas_macros.sty](aas_macros.sty), a small AASTeX-derived macro subset loaded by the class.
-
 ### Add A Clickable Jira Tag
 
 Use the helper:
@@ -178,7 +159,3 @@ If relevant, authors may consider adding the following sections:
 - decision or recommendation
 - risks and limitations
 
-## Choosing Between The Two `.tex` Files
-
-- Use [uksrc-memo-template.tex](uksrc-memo-template.tex) when you want the cleanest possible starting point.
-- Use [uksrc-memo-example.tex](uksrc-memo-example.tex) when you want a reminder of the richer features available in the class.
