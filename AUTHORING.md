@@ -151,11 +151,13 @@ Use the helper:
 
 This renders as `jira:SE-397` while linking to the matching UKSRC Jira ticket.
 
-## Optional Sections
+### Acknowledgements And Contributions
 
-If relevant, authors may consider adding the following sections:
+The template includes an `Acknowledgements` section by default. This is a good
+place to record funding, facilities, infrastructure, institutional support,
+collaborations, or other assistance relevant to the memo.
 
-- options considered
-- decision or recommendation
-- risks and limitations
+Contribution statements are optional. If useful, authors may add a separate
+`Contributions` section. The [CRediT taxonomy](https://credit.niso.org/) can be used as guidance for
+contribution wording.
 
