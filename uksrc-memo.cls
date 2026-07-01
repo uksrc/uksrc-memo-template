@@ -289,7 +289,7 @@
   \begin{center}
     \includegraphics[width=0.63\textwidth]{\uksrclogopath}\par
     \vspace{6mm}
-    {\color{uksrcNavy}\fontsize{26}{31}\selectfont\sffamily\bfseries\DocumentTitle}\par
+    {\color{uksrcNavy}\fontsize{26}{31}\selectfont\sffamily\bfseries\DocumentTitle\par}
     \vspace{5mm}
     {\Large\sffamily\bfseries\color{uksrcGreen} UKSRC \DocumentType}
   \end{center}
