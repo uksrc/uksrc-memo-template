@@ -99,6 +99,10 @@ Use another `\AddAuthorApproval{name}{designation}{affiliation}{signature/date}`
 ### Add Revision History
 
 Use another `\AddDocumentRevision{revision}{date}{comment}` line.
+Document-history comments should describe substantive changes clearly enough
+for a reader to understand what changed between revisions. Avoid vague entries
+such as `Updated` or `Minor changes`; prefer specific notes such as
+`Added validation scope and updated reviewer comments`.
 
 ### Add A Separate Document Information Table
 
@@ -160,4 +164,3 @@ collaborations, or other assistance relevant to the memo.
 Contribution statements are optional. If useful, authors may add a separate
 `Contributions` section. The [CRediT taxonomy](https://credit.niso.org/) can be used as guidance for
 contribution wording.
-
