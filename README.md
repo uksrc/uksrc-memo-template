@@ -9,13 +9,26 @@ This repository provides a reusable UKSRC memo class together with two entry poi
 - [uksrc-memo-template.tex](uksrc-memo-template.tex) designed to serve as a more minimal jumping-off point;
 - [uksrc-memo-example.tex](uksrc-memo-example.tex) is an expanded version of `uksrc-memo-template.tex` illustrating additional optional features of the memo class.
 
-## Quick start
+## Start a memo
 
-1. Clone the repository and open it locally or upload it to Overleaf.
+You can start a new memo directly in Overleaf or from a local clone of this repository.
+
+### Use in Overleaf
+
+You can create a new Overleaf project from this template using one of the links below:
+
+- [Open the example memo in Overleaf](https://www.overleaf.com/docs?snip_uri=https%3A%2F%2Fgithub.com%2Fuksrc%2Fuksrc-memo-template%2Farchive%2Frefs%2Ftags%2Fuksrc-memo-template-v0.1.0.zip&main_document=uksrc-memo-example.tex&engine=pdflatex)
+- [Open the blank memo template in Overleaf](https://www.overleaf.com/docs?snip_uri=https%3A%2F%2Fgithub.com%2Fuksrc%2Fuksrc-memo-template%2Farchive%2Frefs%2Ftags%2Fuksrc-memo-template-v0.1.0.zip&main_document=uksrc-memo-template.tex&engine=pdflatex)
+
+These links create a new Overleaf project from the public `uksrc-memo-template-v0.1.0` GitHub release. You can then edit the files in Overleaf and save your own copy.
+
+### Work locally
+
+1. Clone the repository.
 2. Start from [uksrc-memo-template.tex](uksrc-memo-template.tex).
 3. Update the placeholders with your memo content.
 4. If the memo cites literature, uncomment the bibliography lines near the end of the starter file and add references to [uksrc-memo-template.bib](uksrc-memo-template.bib) or switch to a memo-specific `.bib` file.
-5. If working locally, build with `latexmk -pdf uksrc-memo-template.tex`.
+5. Build with `latexmk -pdf uksrc-memo-template.tex`.
 
 See [AUTHORING.md](AUTHORING.md) for additional file guidance.
 
